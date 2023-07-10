@@ -1,0 +1,17 @@
+body{
+    background-color: rgb(12, 183, 242);
+}
+
+.container-fluid{
+    background-color: aliceblue;
+    border-radius: 15px;
+    width: fit-content;
+    text-align: center;
+    margin-top: 250px;
+    padding: 20px;
+}
+
+a{
+    color:white;
+    text-decoration: none;
+}

@@ -1,0 +1,67 @@
+.body{
+    background-color: rgb(255, 255, 255);
+}
+.dropdown-menu, li{
+    font-size: 20px;
+}
+.MainSection{
+    height:max-content; 
+}
+
+.RedesSociales{
+    width: 35px;
+    height: 35px;
+}
+
+#Redes{
+    padding: 0%;
+    border-radius: 100%;
+}
+
+#Redes:hover{
+    border-width: 1px;
+    border-color: green ;
+    background-color: rgb(255, 255, 255);
+}
+
+.img-fluid{
+    width: 150px;
+    height:150px;
+}
+
+.carousel-item{
+    background-color: rgb(135, 135, 135);
+    text-align: center;
+}
+
+.carousel-caption{
+    font-size: 20px;
+}
+#img{
+    display: block;
+    margin: 0 auto;
+}
+
+#text{
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 1px black;
+}
+.breadcrumb{
+    padding: 0px;
+}
+
+#iniciar{
+    float: right;
+}
+.imgs{
+    width: 50px;
+    height: 50px;
+    border: none;
+}  
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 700,
+  'GRAD' 200,
+  'opsz' 48;
+}

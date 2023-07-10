@@ -1,0 +1,62 @@
+#form{
+   padding: 10px;
+    border-radius: 10px;
+    height: max-content;
+    box-shadow: 0px 0px 10px 2px rgb(000, 000, 000, 0.5);
+    width: fit-content;
+    background-color: rgb(155, 247, 216);
+}
+#bt{
+    margin:10px;
+}
+
+
+#air{
+    margin: 0 auto;
+}
+
+.form-control{
+    border-color:black;
+    border-width: 2px black;
+ 
+}
+input[type="text"] {
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  input[type="text"]:focus {
+    outline: none;
+    border-bottom: 2px solid #0077ff;
+  }
+  
+  input[type="text"]:focus::placeholder {
+    font-size: 12px;
+    transform: translateY(-20px);
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+  }
+  input[type="number"] {
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  input[type="number"]:focus {
+    outline: none;
+    border-bottom: 2px solid #0077ff;
+  }
+  
+  input[type="number"]:focus::placeholder {
+    font-size: 12px;
+    transform: translateY(-20px);
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+  }
+    
+  

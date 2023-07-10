@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="Estilos/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <link rel="icon" href="Images/utech.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libros</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navbar">
+    <div class="container-fluid">
+     
+      <a class="navbar-brand" href="index.php"><img src="Images/utech.ico"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Componentes
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="libros.php">Libros</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="Fuentesdepoder.html">Fuentes de poder</a></li>
+              <li><hr class="dropdown-divider"></li>
+            </ul>
+          </li>
+          <?php 
+          session_start();
+          if(isset($_SESSION['tipo']) && $_SESSION['tipo'] == 'admin') {
+        ?>
+          <li class="nav-item">
+            <a class="nav-link" href="LibrosDatos.php">Datos</a>
+          </li>
+        <?php } ?>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.php">Inicio</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Libros</li>
+        </ol>
+      </nav>
+      <footer class="bg-dark text-center text-white">
+  
+        <div class="container p-4">
+          
+          <section class="mb-4">
+            
+            <a id="Redes" class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-facebook-f"><img class="RedesSociales" src="Images/Facebook.png" alt="Facebook"></i
+            ></a>
+      
+            
+            <a id="Redes" class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-twitter"><img class="RedesSociales" src="Images/Twitter.png" alt="Twitter"></i
+            ></a>
+      
+            
+            <a id="Redes" class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-google"><img class="RedesSociales" src="Images/Google.png" alt="Google"></i
+            ></a>
+      
+          
+            <a id="Redes" class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-instagram"><img class="RedesSociales" src="Images/Instagram.png" alt="Instagram"></i
+            ></a>
+      
+            
+            <a id="Redes" class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-linkedin-in"><img class="RedesSociales" src="Images/Linkedin.png" alt="Linkedin"></i
+            ></a>
+      
+            
+            <a id="Redes" class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-github"><img class="RedesSociales" src="Images/github.png" alt="Github"></i
+            ></a>
+          </section>
+          
+          <section class="">
+            <form action="">
+          
+              <div class="row d-flex justify-content-center">
+      
+                <div class="col-auto">
+                  <p class="pt-2">
+                    <strong>Sign up for our newsletter</strong>
+                  </p>
+                </div>
+                <div class="col-md-5 col-12">
+                  <div class="form-outline form-white mb-4">
+                    <input type="email" id="form5Example21" class="form-control" />
+                    <label class="form-label" for="form5Example21">Email address</label>
+                  </div>
+                </div>
+                <div class="col-auto">
+      
+                  <button type="submit" class="btn btn-outline-light mb-4">
+                    Subscribe
+                  </button>
+                </div>
+      
+              </div>
+      
+            </form>
+          </section>
+      
+          <section class="mb-4">
+            <p>
+             Mapa del Sitio
+            </p>
+          </section>
+      
+          <section class="">
+      
+            <div class="row">
+             
+              <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase"></h5>
+      
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="Computadoras.html" class="text-white">Computadoras</a>
+                  </li>
+                  <li>
+                    <a href="Laptop.html" class="text-white">Laptops</a>
+                  </li>
+                </ul>
+              </div>
+             
+              <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase"></h5>
+      
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="Accesorios.html" class="text-white">Accesrorios</a>
+                  </li>
+                  <li>
+                    <a href="Tarjetasdevideo.html" class="text-white">Tarjetas de Video</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase"></h5>
+      
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="Placasmadre.html" class="text-white">Placas Madre</a>
+                  </li>
+                  <li>
+                    <a href="libros.php" class="text-white">Libros</a>
+                  </li>
+                </ul>
+              </div>
+      
+              <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase"></h5>
+      
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="Fuentesdepoder.html" class="text-white">Fuentes de Poder</a>
+                  </li>
+                  <li>
+                    <a href="Almacenamiento.html" class="text-white">Almacenamiento</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(89, 215, 190, 0.2);">
+          <a class="text-white" href="#">UTech</a>
+        </div>
+      </footer>
+</body>
+</html>
