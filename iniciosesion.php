@@ -10,6 +10,7 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="Estilos/inicio.css">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 
 <body>
@@ -38,6 +39,7 @@
                     <i class="reveal-icon ri-eye-fill" id="reveal-icon"></i>
                 </div>
                 <button class="login-btn">Entrar</button>
+                <div id="google-signin-button"></div>
                 <a href="recuperar.php" class="forgot">¿Olvidaste tu Contraseña?</a>
                 <div class="create">
                     <a href="registrar.php">Crea tu Cuenta</a>
@@ -58,5 +60,20 @@
         </script>
     </form>
 </body>
+<script>
+        function handleCredentialResponse(response) {
+            console.log(response.credential);
+        }
+
+        google.accounts.id.initialize({
+            client_id: '937291392613-80aersam1sajba116fopkd3c0pq4u6mv.apps.googleusercontent.com',
+            callback: handleCredentialResponse
+        });
+
+        google.accounts.id.renderButton(
+            document.getElementById('google-signin-button'),
+            { theme: 'outline', size: 'large' }
+        );
+    </script>
 
 </html>

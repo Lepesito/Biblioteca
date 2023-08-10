@@ -6,6 +6,7 @@ if (!isset($_SESSION['tipo']) || $_SESSION['tipo'] !== 'admin') {
 }
 ?>
 <?php
+require_once 'api.php';
 include("conexion.php");
 $con = conectar();
 $sql = "SELECT l.idLibros, l.titulo, a.nombre AS autor, l.descripcion, l.precio, l.es_gratis
@@ -24,6 +25,7 @@ echo "</pre>";*/
 <html lang="en">
 
 <head>
+<link rel="icon" href="Images/libro.ico">
   <link rel="stylesheet" href="Estilos/datos.css">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -41,7 +43,7 @@ echo "</pre>";*/
   <title>Libros</title>
 </head>
 
-<body style="background: linear-gradient(to bottom right, #00f9f9, #09efd1, #3eff61);">
+<body class="body">
   <form id="bt" style="margin-left:2%;" action="libros.php">
     <a href="libros.php"><span style="color:white; font-size:50px;"
         class="material-symbols-outlined">arrow_back_ios</span></a>
@@ -110,19 +112,33 @@ echo "</pre>";*/
 
           <tbody>
             <?php
-            while ($row = mysqli_fetch_array($query)) {
+             while ($row = mysqli_fetch_array($query)) {
               echo "<tr>";
               echo "<td style='display: none;'>" . $row['idLibros'] . "</td>";
-              echo "<td>" . $row['titulo'] . "</td>";
-              echo "<td>" . $row['autor'] . "</td>";
+
+              // Mostrar el título como enlace a Wikipedia
+              $titulo = $row['titulo'];
+              $tituloEnlace = buscarEnWikipedia($titulo);
+              echo "<td><a href='$tituloEnlace' target='_blank'>$titulo</a></td>";
+
+              // Mostrar el autor como enlace a Wikipedia si se encontraron resultados
+              $autor = $row['autor'];
+              $autorEnlace = '';
+              if ($autor !== 'Autor desconocido') {
+                  $autorEnlace = buscarEnWikipedia($autor);
+                  echo "<td><a href='$autorEnlace' target='_blank'>$autor</a></td>";
+              } else {
+                  echo "<td>$autor</td>";
+              }
+
               echo "<td>" . $row['descripcion'] . "</td>";
               echo "<td>" . $row['precio'] . "</td>";
               echo "<td style='display: none;'>" . $row['es_gratis'] . "</td>";
-              echo "<td><a href='ActualizarLibros.php?id=" . $row['idLibros'] . "' class='btn btn-warning'>Editar</a> </td>";
-              echo "<td><a href='DeleteLibros.php?id=" . $row['idLibros'] . "' class='btn btn-danger'>Eliminar</a> </td>";
-              echo "</tr>";              
-            }
-            ?>
+              echo "<td><a href='ActualizarLibros.php?id=" . $row['idLibros'] . "' class='btn btn-warning'>Editar</a></td>";
+              echo "<td><a href='DeleteLibros.php?id=" . $row['idLibros'] . "' class='btn btn-danger'>Eliminar</a></td>";
+              echo "</tr>";
+          }
+          ?>
           </tbody>
         </table>
       </div>

@@ -1,7 +1,9 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+<link rel="stylesheet" href="Estilos/validar.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +16,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to bottom right, #00f9f9, #09efd1, #3eff61);">
+    background: linear-gradient(to bottom right, #ffcaa8, #d292e3, #65597f)">
 
 
 </body>
@@ -46,7 +48,6 @@
         $fila = mysqli_fetch_assoc($result);
 
         if (password_verify($Password, $fila['password'])) {
-            session_start();
             $_SESSION['tipo'] = $fila['Tipo'] == 'admin' ? 'admin' : 'usuario';
             echo "<script>
                         Swal.fire({

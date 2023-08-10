@@ -1,10 +1,15 @@
+.body{
+  background: linear-gradient(to bottom right, #ffcaa8, #d292e3, #65597f);
+  background-size: cover;
+  background-attachment: fixed;
+}
 #form{
    padding: 10px;
     border-radius: 10px;
     height: max-content;
     box-shadow: 0px 0px 10px 2px rgb(000, 000, 000, 0.5);
     width: fit-content;
-    background-color: rgb(155, 247, 216);
+    background: linear-gradient(to top, #ffcaa8, #d292e3, #65597f)
 }
 #bt{
     margin:10px;
@@ -59,4 +64,6 @@ input[type="text"] {
     transition: all 0.3s ease-in-out;
   }
     
-  
+.divider, #enviar {
+  background: linear-gradient(to bottom right, #65597f, #65597f, #65597f)
+}

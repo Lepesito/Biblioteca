@@ -1,6 +1,6 @@
 <?php
 function conectar(){
-    $host="localhost";
+    $host = "localhost";
     $user="root";
     $pass="root";
     $bd="bibliotecavirtual";
